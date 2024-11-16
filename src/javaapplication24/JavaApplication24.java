@@ -4,17 +4,17 @@
  */
 package javaapplication24;
 
-/**
- *
- * @author kaito
- */
+import javax.swing.JOptionPane;
+
 public class JavaApplication24 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+   public static void main(String[] args) {
+        String priceInput = JOptionPane.showInputDialog("Enter the price of the product:");
+        double price = Double.parseDouble(priceInput);
+
+        double salesTax = price * 0.06;
+        double totalPrice = price + salesTax;
+
+        JOptionPane.showMessageDialog(null, "The total price of the product is: RM " + totalPrice);
     }
-    
 }
